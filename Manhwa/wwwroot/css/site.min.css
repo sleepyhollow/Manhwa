@@ -1,0 +1,51 @@
+body {
+    padding-top: 55px;
+    padding-bottom: 25px;
+    background-color: #e6e6e6;
+}
+
+div#homeCarousel.carousel.slide {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.text-center > .card-block {
+    padding: .4rem !important;
+}
+
+.spacer {
+    padding-top: 15px;
+}
+
+.display-5 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.chap-number {
+    margin-left: -10px;
+    white-space: nowrap;
+}
+
+.flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.hr-dark {
+    border-top: 1px solid #969696 !important;
+}
+
+.card-title {
+    white-space: nowrap;
+}
+
+.carousel .carousel-indicators li {
+    max-width: 30px !important;
+    height: 3px !important;
+    border-radius: 0% !important;
+    cursor: pointer !important;
+}

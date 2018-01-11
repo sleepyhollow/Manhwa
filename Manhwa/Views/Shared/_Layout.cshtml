@@ -1,0 +1,100 @@
+﻿@using Microsoft.AspNetCore.Http.Extensions
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/flash.css" asp-append-version="true"/>
+    <script type="text/javascript" src="/scripts/loading.js" asp-append-version="true"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96863029-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-96863029-2');
+    </script>
+    <meta name="exoclick-site-verification" content="0db6a0a8b8127eafa4c11d6e02a3a242">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Manhwa.co</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true"/>
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true"/>
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-expand fixed-top navbar-dark scrolling-navbar indigo">
+        <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Manhwa.co</a>
+            <div class="navbar-nav mr-auto"></div>
+            <ul class="navbar-nav" style="white-space: nowrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="/series"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/gXCUkwE" target="_blank"><i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp;&nbsp;Discord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://patreon.com/Manhwa" target="_blank"><i class="fa fa-usd" aria-hidden="true"></i>&nbsp;&nbsp;Patreon</a>
+                </li>
+            </ul>
+        </nav>
+    @RenderBody()
+    <script id="dsq-count-scr" src="//manhwa.disqus.com/count.js" async></script>
+    <div class="container-fluid">
+        <div class="row" style="margin-top: -18px">
+            <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <hr class="hr-dark" />
+            </div>
+            <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+        </div>
+        <div class="card card-body">
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function() {
+                    this.page.url = "@Context.Request.GetDisplayUrl()";
+                    this.page.identifier = "@ViewData["Title"]";
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://manhwa.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <hr class="hr-dark" />
+            </div>
+            <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+        </div>
+        <footer>
+            <p class="text-center">&copy; 2017 - Manhwa.co</p>
+        </footer>
+    </div>
+    <environment names="Development">
+        <script type="text/javascript" src="/scripts/jquery.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/lib/tether/dist/js/tether.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="text/javascript" src="/scripts/jquery.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/lib/tether/dist/js/tether.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
+        <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

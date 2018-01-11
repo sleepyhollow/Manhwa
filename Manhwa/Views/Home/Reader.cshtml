@@ -1,0 +1,56 @@
+@model ReaderPageModel
+@{
+    ViewData["Title"] = @Model.SafeName() + " - Chapter " + @Model.Chapter;
+}
+<div class="container">
+    <div class="row" style="margin-top: 10px">
+        <div class="hidden-md-down col-lg-1 col-xl-2"></div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
+            <a href="/@Model.SafeName().Replace(" ", "-").Replace("'", "")/@(Model.Chapter - 1)" class="btn peach-gradient btn-rounded">
+                Previous
+            </a>
+            @if (Model.LastChapter()) // Show the next button only if it's not the last chapter in the series
+            {
+                <a href="/@Model.SafeName().Replace(" ", "-").Replace("'", "")/@(Model.Chapter + 1)" class="btn blue-gradient btn-rounded float-right">
+                    Next
+                </a>
+            }
+            else
+            {
+                <a href="/series" class="btn blue-gradient btn-rounded float-right">
+                    Back to Series
+                </a>
+            }
+        </div>
+        <div class="hidden-md-down col-lg-1 col-xl-2"></div>
+    </div>
+    @foreach (var pages in Model.GetImages()) // Displaying the pages
+    {
+        <div class="row">
+            <div class="col-12">
+                <img src="https://manhwa.co/@pages" class="img-fluid d-block mx-auto" alt="" />
+            </div>
+        </div>
+    }
+    <div class="row" style="margin-bottom: 25px">
+        <div class="hidden-md-down col-lg-1 col-xl-2"></div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
+            <a href="/@Model.SafeName().Replace(" ", "-").Replace("'", "")/@(Model.Chapter - 1)" class="btn peach-gradient btn-rounded">
+                Previous
+            </a>
+            @if (Model.LastChapter()) // Show the next button only if it's not the last chapter in the series
+            {
+                <a href="/@Model.SafeName().Replace(" ", "-").Replace("'", "")/@(Model.Chapter + 1)" class="btn blue-gradient btn-rounded float-right">
+                    Next
+                </a>
+            }
+            else
+            {
+                <a href="/series" class="btn blue-gradient btn-rounded float-right">
+                    Back to Series
+                </a>
+            }
+        </div>
+        <div class="hidden-md-down col-lg-1 col-xl-2"></div>
+    </div>
+</div>

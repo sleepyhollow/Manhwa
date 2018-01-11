@@ -1,0 +1,35 @@
+﻿body {
+    padding-top: 55px;
+    padding-bottom: 25px;
+}
+
+div#homeCarousel.carousel.slide {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.text-center > .card-block {
+    padding: .4rem !important;
+}
+
+.spacer {
+    padding-top: 15px;
+}
+
+.display-5 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.chap-number {
+    margin-left: -10px;
+    white-space: nowrap;
+}
+
+.carousel .carousel-indicators li {
+    max-width: 18px !important;
+    height: 6px !important;
+    border-radius: 45% !important;
+    cursor: pointer !important;
+}

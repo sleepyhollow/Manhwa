@@ -1,0 +1,103 @@
+﻿@model StaffPageModel
+@{
+    ViewData["Title"] = "Staff";
+}
+<div class="container-fluid">
+    <div class="card card-cascade wider reverse my-4">
+        <div class="view overlay hm-white-slight">
+            <img src="/@Model.GetBanner()" class="img-fluid card-img-top rounded" alt="">
+        </div>
+        <div class="card-body text-center">
+            <h4 class="card-title"><strong>We are recruiting!</strong></h4>
+            <p class="card-text">The following positions are open:</p>
+            <p class="card-text">Korean, Japanese, and Chinese translators</p>
+            <p class="card-text">Typesetter</p>
+            <p class="card-text">Cleaner</p>
+            <a href=""><h5 class="indigo-text"><strong>Click here to apply on discord</strong></h5></a>
+        </div>
+    </div>
+    <div class="row">
+        @for (var i = 0; i < 4; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-bottom: 18px">
+                <div class="card testimonial-card">
+                    <div class="card-up lighten-1" style="background-color: @Model.GetColor(i)"></div>
+                    <div class="avatar">
+                        <img src="/@Model.GetAvatar(i)" class="rounded-circle" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">@Model.GetName(i)</h4>
+                        <hr />
+                        <p>@Model.GetTitle(i)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (var i = 4; i < 8; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-bottom: 18px">
+                <div class="card testimonial-card">
+                    <div class="card-up lighten-1" style="background-color: @Model.GetColor(i)"></div>
+                    <div class="avatar">
+                        <img src="/@Model.GetAvatar(i)" class="rounded-circle" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">@Model.GetName(i)</h4>
+                        <hr />
+                        <p>@Model.GetTitle(i)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (var i = 8; i < 12; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-bottom: 18px">
+                <div class="card testimonial-card">
+                    <div class="card-up lighten-1" style="background-color: @Model.GetColor(i)"></div>
+                    <div class="avatar">
+                        <img src="/@Model.GetAvatar(i)" class="rounded-circle" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">@Model.GetName(i)</h4>
+                        <hr />
+                        <p>@Model.GetTitle(i)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        <div class="hidden-md-down col-lg-3 col-xl-3" style="margin-bottom: 18px"></div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-bottom: 18px">
+            <div class="card testimonial-card">
+                <div class="card-up lighten-1" style="background-color: @Model.GetColor(12)"></div>
+                <div class="avatar">
+                    <img src="/@Model.GetAvatar(12)" class="rounded-circle" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">@Model.GetName(12)</h4>
+                    <hr />
+                    <p>@Model.GetTitle(12)</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="margin-bottom: 18px">
+            <div class="card testimonial-card">
+                <div class="card-up lighten-1" style="background-color: @Model.GetColor(13)"></div>
+                <div class="avatar">
+                    <img src="/@Model.GetAvatar(13)" class="rounded-circle" alt="">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">@Model.GetName(13)</h4>
+                    <hr />
+                    <p>@Model.GetTitle(13)</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-md-down col-lg-3 col-xl-3" style="margin-bottom: 18px"></div>
+    </div>
+</div>

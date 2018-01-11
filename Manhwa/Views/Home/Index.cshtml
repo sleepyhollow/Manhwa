@@ -1,0 +1,155 @@
+﻿@model HomepageModel
+@{
+    ViewData["Title"] = "Home";
+}
+<div id="homeCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#homeCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#homeCarousel" data-slide-to="2" class=""></li>
+        <li data-target="#homeCarousel" data-slide-to="3" class=""></li>
+        <li data-target="#homeCarousel" data-slide-to="4" class=""></li>
+        <li data-target="#homeCarousel" data-slide-to="5" class=""></li>
+        <li data-target="#homeCarousel" data-slide-to="6" class=""></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" style="background-color: #@Model.GetColors(0)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="/Switch">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(12)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(1)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="https://discord.gg/gXCUkwE" target="_blank">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(13)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(2)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="/Butterfly">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(14)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(3)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="/Satanophany">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(15)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(4)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="https://patreon.com/Manhwa">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(16)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(5)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="/30cm">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(17)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-color: #@Model.GetColors(6)">
+            <div class="view hm-stylish-slight flex-center">
+                <a href="/Girl-Next-Door">
+                    <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(18)" alt="">
+                    <div class="mask"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <h5 class="display-5 text-center">Latest Updates</h5>
+            <hr class="hr-dark"/>
+        </div>
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+    <div class="row">
+        @for (var i = 0; i < 4; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card card-cascade narrower" style="margin-bottom: 25px">
+                    <div class="view overlay hm-stylish-slight">
+                        <img src="@Model.GetImages(i)" class="img-fluid card-img-top rounded" alt="">
+                        <a href="/@Model.GetLatestSeries(i).Replace(" ", "-").Replace("'", "")/@Model.GetChapterNumbers(i)">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@Model.GetLatestSeries(i)</h5>
+                        <p class="card-text">Chapter @Model.GetChapterNumbers(i)</p>
+                        <small class="text-muted">@Model.GetDates(i)</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row">
+        @for (var i = 4; i < 8; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card card-cascade narrower" style="margin-bottom: 25px">
+                    <div class="view overlay hm-stylish-slight">
+                        <img src="@Model.GetImages(i)" class="img-fluid card-img-top rounded" alt="">
+                        <a href="/@Model.GetLatestSeries(i).Replace(" ", "-").Replace("'", "")/@Model.GetChapterNumbers(i)">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@Model.GetLatestSeries(i)</h5>
+                        <p class="card-text">Chapter @Model.GetChapterNumbers(i)</p>
+                        <small class="text-muted">@Model.GetDates(i)</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="row spacer">
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <h5 class="display-5 text-center">Featured Content</h5>
+            <hr class="hr-dark"/>
+        </div>
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+    <div class="row">
+        @for (var i = 8; i < 12; i++)
+        {
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="card card-cascade narrower" style="margin-bottom: 25px">
+                    <div class="view overlay hm-stylish-slight">
+                        <img src="@Model.GetImages(i)" class="img-fluid card-img-top rounded" alt="">
+                        <a href="/@Model.GetFeatured(i-8).Replace(" ", "-").Replace("'", "")">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title display-5">@Model.GetFeatured(i-8)</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
