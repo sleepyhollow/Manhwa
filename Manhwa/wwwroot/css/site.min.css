@@ -49,3 +49,7 @@ div#homeCarousel.carousel.slide {
     border-radius: 0% !important;
     cursor: pointer !important;
 }
+
+nav {
+    margin: 0 -1px;
+}
