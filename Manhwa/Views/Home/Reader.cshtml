@@ -3,7 +3,25 @@
     ViewData["Title"] = @Model.SafeName() + " - Chapter " + @Model.Chapter;
 }
 <div class="container">
-    <div class="row" style="margin-top: 10px">
+    <div class="row spacer">
+        <div class="col-12" align="center">
+            <script type="text/javascript">
+                var ad_idzone = "2888154",
+                    ad_width = "728",
+                    ad_height = "90";
+            </script>
+            <script type="text/javascript" src="https://ads.exosrv.com/ads.js"></script>
+            <noscript><a href="https://main.exosrv.com/img-click.php?idzone=2888154" target="_blank"><img src="https://syndication.exosrv.com/ads-iframe-display.php?idzone=2888154&output=img&type=728x90" width="728" height="90"></a></noscript>
+        </div>
+    </div>
+    <div class="row">
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <hr class="hr-dark" />
+        </div>
+        <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+    <div class="row">
         <div class="hidden-md-down col-lg-1 col-xl-2"></div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
             <a href="/@Model.SafeName().Replace(" ", "-").Replace("'", "")/@(Model.Chapter - 1)" class="btn peach-gradient btn-rounded">
@@ -17,7 +35,7 @@
             }
             else
             {
-                <a href="/series" class="btn blue-gradient btn-rounded float-right">
+                <a href="/Series" class="btn blue-gradient btn-rounded float-right">
                     Back to Series
                 </a>
             }
@@ -28,7 +46,7 @@
     {
         <div class="row">
             <div class="col-12">
-                <img src="https://manhwa.co/@pages" class="img-fluid d-block mx-auto" alt="" />
+                <img src="https://manhwa.co/@pages" class="img-fluid d-block mx-auto" alt=""/>
             </div>
         </div>
     }
@@ -46,7 +64,7 @@
             }
             else
             {
-                <a href="/series" class="btn blue-gradient btn-rounded float-right">
+                <a href="/Series" class="btn blue-gradient btn-rounded float-right">
                     Back to Series
                 </a>
             }

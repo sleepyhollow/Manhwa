@@ -47,7 +47,7 @@
         </div>
         <div class="carousel-item" style="background-color: #@Model.GetColors(4)">
             <div class="view hm-stylish-slight flex-center">
-                <a href="https://patreon.com/Manhwa">
+                <a href="https://patreon.com/Manhwa" target="_blank">
                     <img class="img-fluid" width="1180" height="450" src="/@Model.GetImages(16)" alt="">
                     <div class="mask"></div>
                 </a>
@@ -79,10 +79,21 @@
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-12" align="center">
+            <script type="text/javascript">
+                var ad_idzone = "2888154",
+                    ad_width = "728",
+                    ad_height = "90";
+            </script>
+            <script type="text/javascript" src="https://ads.exosrv.com/ads.js"></script>
+            <noscript><a href="https://main.exosrv.com/img-click.php?idzone=2888154" target="_blank"><img src="https://syndication.exosrv.com/ads-iframe-display.php?idzone=2888154&output=img&type=728x90" width="728" height="90"></a></noscript>
+        </div>
+    </div>
+    <div class="row spacer">
         <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <h5 class="display-5 text-center">Latest Updates</h5>
-            <hr class="hr-dark"/>
+            <hr class="hr-dark" />
         </div>
         <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
     </div>
@@ -130,7 +141,7 @@
         <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
         <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <h5 class="display-5 text-center">Featured Content</h5>
-            <hr class="hr-dark"/>
+            <hr class="hr-dark" />
         </div>
         <div class="hidden-sm-down col-md-2 col-lg-2 col-xl-2"></div>
     </div>
@@ -141,12 +152,12 @@
                 <div class="card card-cascade narrower" style="margin-bottom: 25px">
                     <div class="view overlay hm-stylish-slight">
                         <img src="@Model.GetImages(i)" class="img-fluid card-img-top rounded" alt="">
-                        <a href="/@Model.GetFeatured(i-8).Replace(" ", "-").Replace("'", "")">
+                        <a href="/@Model.GetFeatured(i - 8).Replace(" ", "-").Replace("'", "")">
                             <div class="mask"></div>
                         </a>
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="card-title display-5">@Model.GetFeatured(i-8)</h5>
+                        <h5 class="card-title display-5">@Model.GetFeatured(i - 8)</h5>
                     </div>
                 </div>
             </div>
