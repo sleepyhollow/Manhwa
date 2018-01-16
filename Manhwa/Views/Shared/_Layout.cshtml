@@ -2,31 +2,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/css/flash.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="/css/flash.css" asp-append-version="true" />
+    <script type="text/javascript" src="/scripts/ads.js" asp-append-version="true"></script>
     <script type="text/javascript" src="/scripts/loading.js" asp-append-version="true"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96863029-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-96863029-2');
     </script>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Manhwa.co</title>
     <environment names="Development">
-        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true"/>
-        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true" />
+        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" asp-append-version="true" />
-        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true" />
     </environment>
     <environment names="Staging,Production">
-        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true"/>
-        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/lib/tether/dist/css/tether.css" asp-append-version="true" />
+        <link rel="stylesheet" href="/css/mdb.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" asp-append-version="true" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" asp-append-version="true" />
-        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true"/>
+        <link rel="stylesheet" href="/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
 <body>
@@ -78,16 +79,16 @@
             <div class="card card-body">
                 <div id="disqus_thread"></div>
                 <script>
-                var disqus_config = function() {
-                    this.page.url = "@Context.Request.GetDisplayUrl()";
-                    this.page.identifier = "@ViewData["Title"]";
-                };
-                (function() {
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://manhwa.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
+                    var disqus_config = function() {
+                        this.page.url = "@Context.Request.GetDisplayUrl()";
+                        this.page.identifier = "@ViewData["Title"]";
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://manhwa.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
                 </script>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
@@ -115,18 +116,18 @@
         <p class="text-center">&copy; 2017 - Manhwa.co</p>
     </footer>
 </div>
-    <environment names="Development">
-        <script type="text/javascript" src="/scripts/jquery.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/scripts/bootstrap.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
-    </environment>
-    <environment names="Staging,Production">
-        <script type="text/javascript" src="/scripts/jquery.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/scripts/bootstrap.min.js" asp-append-version="true"></script>
-        <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
-    </environment>
-    @RenderSection("Scripts", required: false)
+<environment names="Development">
+    <script type="text/javascript" src="/scripts/jquery.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
+</environment>
+<environment names="Staging,Production">
+    <script type="text/javascript" src="/scripts/jquery.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/lib/popper.js/dist/umd/popper.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/scripts/bootstrap.min.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="/scripts/mdb.min.js" asp-append-version="true"></script>
+</environment>
+@RenderSection("Scripts", required: false)
 </body>
 </html>
